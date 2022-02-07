@@ -47,7 +47,7 @@ def Images(*args, **kwargs):
 	origin = f'{lat_a},{long_a}'
 	destination = f'{lat_b},{long_b}'
 
-	url = "https://maps.googleapis.com/maps/api/directions/json?origin={}&destination={}&mode=walking&key=AIzaSyBHevRNbzAUnMp4BlAq11oEjKBQEG4nqfk".format(origin, destination)
+	url = "https://maps.googleapis.com/maps/api/directions/json?origin={}&destination={}&mode=walking&key="enterkey"".format(origin, destination)
 
 	payload={}
 	headers = {}
