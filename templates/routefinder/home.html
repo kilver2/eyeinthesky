@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+{% block content %}
+<div class="fade-in-image">
+    <div style="height: 100vh;" class="img fluid d-flex flex-column justify-content-center align-items-center">
+        <section class= 'd-flex flex-column align-items-center justify-content-center body text-light container text-center'>
+            <div class='my-3'>
+                <img class ="animate-flicker" src="/static/img/eye.svg" width=150 height=150 />
+            </div>
+            <H1 class = "ele1"> Welcome to: Eye in the Sky </H1>
+            <H3 class = "ele2"> Raising surveillance camera awareness in Amsterdam </H2>
+            <H3 class = "ele2"> If at any point you become lost, click the eye to return to the start </H2>
+            <img class = "ele2"src="/static/img/amsterdam.svg" width=350 height=350 />
+            
+            <div class="d-grid justify-content-center ele3">
+                <a class="css-button" href = "{% url 'routefinder:eye' %}">
+                    <span class="css-button-text-alt">I am ready</span>
+                </a>
+            </div>
+
+            <H3 class = "ele3 mt-5"> A project by Kishan Bijlsma, Nigel Goossens, Noana Smits, Karim Anwar and Martin Kana</H3>
+            <H3 class = "ele3 mt-2" style = "font-size: 20px; font-style: italic;"> Hint: Use full screen mode (F11) for the best viewing experience</H3>
+        </section>
+    </div>
+</div>
+{% endblock %}

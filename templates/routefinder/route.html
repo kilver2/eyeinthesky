@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+
+{% block content %}
+<div style="height: 100vh; width: auto;" class="d-flex align-items-center justify-content-center">
+  <div class = "row mt-5 mb-5">
+    <div class = "fade-in-image">
+      <div class = "row mb-5 mt-5">
+        <div class="d-flex align-items-center">
+          <div class="container text-light text-center">
+            <div class='d-grid justify-content-center'>
+              <a href = "{% url 'routefinder:index' %}"><img class ="img-fluid animate-flicker" src="/static/img/eye.svg" width=150 height=150/></a>
+            </div>
+            <div class = " mt-5">
+              <h2>CCTV cameras are all around us.</h2>
+              <h2>Maybe even more so than you would think...</h2>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "row text-center">
+      <div class = "fade-in-button">
+        <h3 class="row justify-content-center mb-2 " style="font-size:30px;color: #FFFFFF" >Enter two locations of your choice and we will show you the amount of CCTV cameras in between.</h3>
+        <h3 class="row justify-content-center mb-5 " style="font-size:20px;color: #FFFFFF" >We can suggest places such as Damrak, Albert Cuypstraat, Centraal Station, Waterloopplein and Leidseplein</h3>
+        
+        <div class= "row justify-content-center text-center">
+          <div class="col-4">
+            <label style="font-size:30px;color: rgb(138,140,142)" class="form-label" for="id-google-address-a">Start Address</label>
+            <input class="form-control" type="text" placeholder="Begin typing address" id="id-google-address-a" name="google_address_a">
+          </div>
+        </div>
+
+        <div class= "row justify-content-center text-center">
+          <div class="col-4">
+            <label style="font-size:30px;color: rgb(138,140,142)" class="form-label mt-3" for="id-google-address-b">Destination Address</label>
+            <input class="form-control" type="text" placeholder="Begin typing address" id="id-google-address-b" name="google_address_b">
+          </div>
+        </div>
+      
+
+
+        <input type="hidden" class="geo" id="id-lat-a" value="">
+        <input type="hidden" class="geo" id="id-long-a" value="">
+        <input type="hidden" class="geo" id="id-lat-b" value="">
+        <input type="hidden" class="geo" id="id-long-b" value="">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extend_footer %}
+
+
+    <script type="text/javascript">
+
+      var google_api_key = "{{google_api_key|safe}}";
+      var base_country = "{{base_country|safe}}";
+
+    </script>
+
+  <script src="{% static 'google_places_waypoints.js' %}"></script>
+
+
+{% endblock %}

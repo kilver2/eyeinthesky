@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+  
+{% block content %}
+
+
+<div style="height: 100vh" class="d-flex align-items-center">
+    <section class= 'bg-dark text-light container text-center'>
+        <div class='my-3'>
+            <img class ="img-fluid" src="/static/img/eye.svg" width=150 height=150 />
+        </div>
+        <h1>Now that you know this, you may be left wondering:</h1>
+        <h1>Is there something I can do?</h1>
+        <h3 class="mt-4">If you wish to further your research you can have a look here:</h3>
+        <a style="font-size: 25px;"class="text-light" href="https://www.amsterdam.nl/wonen-leefomgeving/veiligheid/bekendmakingen/"> Gemeente Amsterdam </a> <br> 
+        <a style="font-size: 25px;"class="text-light"href="https://sensorenregister.amsterdam.nl/"> Sensorenregister </a> <br> 
+        <a style="font-size: 25px;"class="text-light"href="http://signsofsurveillance.com/map/"> Signs of Surveillance project </a> <br> 
+        <img class ="img mt-4" src="/static/img/line_3.svg" height=250 />
+        <h3 class="mt-4">A petition you could consider signing:</h3>
+        <a style="font-size: 25px;"class="text-light"href="https://en.wikipedia.org/wiki/Petition">Petition</a>
+    </section>
+    </div>
+
+
+
+<div class="container-fluid p-0 fixed-bottom">
+    <div class="row">
+      <div class="col">
+        <a class="text-start btn btn-lg btn-primary btn-dark m-2"  href="{% url 'routefinder:info' %}">Previous page</a>
+      </div>
+      <div class="col">
+        <div style="display: flex; justify-content: flex-end">
+        <a class="text-end btn btn-lg btn-primary btn-dark m-2"   href="{% url 'routefinder:end' %}">Next Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

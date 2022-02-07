@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+  
+{% block content %}
+
+
+<div style="height: 100vh" class="d-flex align-items-center">
+    <section class= 'bg-dark text-light container text-center'>
+        <h1>Thank you for your time</h1>
+        <div class='text-center my-3'>
+            <img class="image-fluid" src="/static/img/eye.svg" height=500>        
+        </div>
+        <h1>We will be seeing you.</h1>
+        <h2>If you wish, share this website with someone who might find it interesting</h2>
+        <a href="whatsapp://send?text=Check out this web page!" data-action="share/whatsapp/share">Share via Whatsapp</a>
+    </section>
+    </div>
+
+
+
+<div class="container-fluid p-0 fixed-bottom">
+    <div class="row">
+      <div class="col">
+        <a class="text-start btn btn-lg m-2 btn-primary btn-dark"  href="{% url 'routefinder:further_research' %}">Previous page</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

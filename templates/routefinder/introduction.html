@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+{% block content %}
+<section class= 'bg-dark container text-light text-center'>
+    <h4 class='p-2'>We have interwoven almost every aspect of our world with technology</h2>
+    <h4 class='p-2'>We peer into our screens of glass. We share our deepest intimacies in our google searches. Our data flows into the hands of unknown third parties.</h2>
+    <h4 class='p-2'>Occasionally we might get the feeling that we are being watched, but then swiftly shrug it off. After all, the only proof we receive of being tracked are some creepily accurate advertisements.</h2>
+    <h4 class='p-2'>There is, however, another kind of technology that is keeping an eye on us. Not metaphorically, but physically... </h2>
+    <h4 class='p-2'>Are you ready to see the eye in the sky?</h2>
+</section>
+
+<div class="container-fluid p-0 fixed-bottom">
+    <div class="row">
+      <div class="col">
+        <a class="text-start btn btn-primary btn-dark" style="width:150px"  href="{% url 'routefinder:index' %}">Previous Page</a>
+      </div>
+      <div class="col">
+        <div style="display: flex; justify-content: flex-end">
+        <a style="width:150px"class="text-end btn btn-primary btn-dark"   href="{% url 'routefinder:eye' %}">Next Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

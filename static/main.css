@@ -1,0 +1,493 @@
+/* body {font-family: 'Open Sans', monospace;}
+{box-sizing: border-box;}  */
+
+/* body {
+  margin: 0;
+} */
+
+.map-container {
+  height: 100%;
+  width: 100%;
+  /* justify-content: center; */
+}
+
+
+#map-route {
+    position: relative;
+    width: 80%;
+    height: 30vw;
+    padding-bottom: 20%;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.fade-in-button {
+  animation: fadeIn 10s;
+  -webkit-animation: fadeIn 10s;
+  -moz-animation: fadeIn 10s;
+  -o-animation: fadeIn 10s;
+  -ms-animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.css-button {
+	font-family: Verdana;
+	color: #FFFFFF;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px #ffffff solid;
+	background: linear-gradient(180deg, #000000 5%, #000000 100%);
+	text-shadow: 1px 1px 1px #000000;
+	box-shadow: inset 1px 1px 2px 0px #000000;
+	cursor: pointer;
+	display: inline-flex;
+  text-decoration: none;
+	align-items: center;
+  margin: 2px 3em 0 3em;
+}
+
+.css-button:hover {
+	background: linear-gradient(180deg, #000000 5%, #000000 100%);
+  color: #FFFFFF;
+}
+
+.css-button-icon {
+	padding: 0px 45px;
+	border-radius: 5px 0 0 5px;
+	color: #FFFFFF;
+	background-color: #000000;
+	border-right: 1px solid rgba(255, 255, 255, 0.16);
+	box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+}
+
+.css-button-icon svg {
+	vertical-align: middle;
+	position: relative;
+	font-size: 39px;
+}
+
+.css-button-text {
+	padding: 10px 18px;
+  margin: 2px 3em 0 3em;
+  text-decoration: none;
+  align-items: center;
+}
+
+.css-button-text-alt {
+	padding: 10px 18px;
+  margin: 2px 3em 0 3em;
+  text-decoration: none;
+  align-items: center;
+}
+
+.ele1 {
+  animation-delay: 5s;
+  animation: 4s fadeIn;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.ele2 {
+  animation-delay: 10s;
+  animation: 7s fadeIn;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.ele3 {
+  animation-delay: 15s;
+  animation: 10s fadeIn;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0.2; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.2; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.2; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.2; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+    animation-delay: 10s;
+   -webkit-animation: flickerAnimation 4s infinite;
+   -moz-animation: flickerAnimation 4s infinite;
+   -o-animation: flickerAnimation 4s infinite;
+    animation: flickerAnimation 4s infinite;
+}
+
+.animated-gif{
+  width: 120vh;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+
+
+/* .logo {
+  width: 150px;
+  padding: 8px;
+} */
+
+
+/* ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.sidenav li a.active {
+  background-color: #2ab607;
+  color: black;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.div-container {
+/* 
+  margin-left: 25%; */
+  /* padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  } */
+/*   
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  .div-container {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+} */
+
+/* input[type=text], input[type=email], input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+} */
+
+
+/* ::-webkit-input-placeholder { 
+  color: #858585;
+  font-family: 'Open Sans', monospace;
+}
+
+:-ms-input-placeholder { 
+  color :#858585;
+  font-family: 'Open Sans', monospace;
+}
+
+::placeholder {
+  color: #858585;
+  font-family: 'Open Sans', monospace;
+}  */
+
+/* select.selection option
+{
+  color: #2ab607;
+  font-family: 'Open Sans', monospace;
+}
+
+input, select{
+  color: #858585;
+  font-family: 'Open Sans', monospace;
+
+} */
+
+/* The container
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+/* Hide the browser's default checkbox */
+/* .check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} */
+
+/* Create a custom checkbox */
+/* .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+} */
+
+/* On mouse-over, add a grey background color */
+/* .check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+} */
+
+/* When the checkbox is checked, add a green background */
+/* .check-container input:checked ~ .checkmark {
+  background-color: #2ab607;
+} */
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/* .check-container:after {
+  content: "";
+  position: absolute;
+  display: none;
+} */
+
+/* Show the checkmark when checked */
+/* .check-container input:checked ~ .checkmark:after {
+  display: block;
+} */
+
+/* Style the checkmark/indicator */
+/* .check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} */
+
+/* .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+} */
+
+/* Hide default HTML checkbox */
+/* .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+} */
+
+/* The slider */
+/* .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+} */
+
+/* input:checked + .slider {
+  background-color: #2ab607;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2ab607;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+} 
+
+/* Rounded sliders */
+/* .slider.round {
+  border-radius: 34px;
+} */ 
+/* 
+.slider.round:before {
+  border-radius: 50%;
+} */
+
+/* button[type=submit] {
+  background-color: #2ab607;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+/* button[type=submit]:hover {
+  background-color: #2ab607;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+} 
+
+table {
+  font-family: 'Courier Prime', monospace;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #434343;
+  color: white;
+}
+
+.selected {
+  background-color: #2ab607;
+  color: #FFF;
+}
+
+#payment-form {
+  width: 100%;
+}
+
+/* style inputs and link buttons */
+/* input, select,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+/* }
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}   */

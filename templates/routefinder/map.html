@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extend_head %}
+
+
+{% endblock %}
+
+
+{% block content %}
+<div style="height: 100vh; width:auto;" class="d-flex flex-column justify-content-center">
+  <div class='d-grid justify-content-center'>
+    <a href = "{% url 'routefinder:index' %}"><img class ="img-fluid animate-flicker" src="/static/img/eye.svg" width=150 height=150/></a>
+  </div>
+
+{% if camerasfound > 0 %}
+  <div class = "fade-in-image">
+    <div class = "container h-100 w-100">
+      <section class= 'text-light container text-center mt-5 mb-5'>
+        <h4> You were in the dark, but now you can see.</h4>
+        <h4> You have been captured by at least {{camerasfound|safe}} CCTV  cameras.</h4>
+        <h4> You have been watched for so long, now it is time that you watch back.</h4>
+      </section>
+    </div>
+  </div>
+
+
+{% else %}
+<div class = "fade-in-image">
+  <div class = "container h-100 w-100">
+    <section class= 'text-light container text-center mt-5 mb-5'>
+      <h4> This time you were lucky... </h4>
+      <h4> You have managed to dodge all the CCTV cameras.</h4>
+      <h4> Try again and see if luck is still on your side </h4>
+    </section>
+  </div>
+</div>
+
+{% endif %}
+
+<div class = "fade-in-button">
+  <div class="row d-flex ">
+    <div class="col-1 my-auto">
+      <img class ="img float-end d-block animate-flicker" src="/static/img/eye.svg" width=80 height=80 />
+    </div>
+
+    <div class="col-10 mx-auto">
+      <div class="d-flex justify-content-center mx-auto my-auto">
+        <div id="map-route"></div>
+      </div>
+    </div> 
+
+    <div class="col-1 my-auto"> 
+      <img class ="img float-start d-block animate-flicker" src="/static/img/eye.svg" width=80 height=80 />
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- <section class= 'font-italic text-light container text-center mb-3 mt-3'>
+
+</section> -->
+  <div class = "offset-md-3 row d-flex flex-row fade-in-button">
+    <div class = "col-4 d-flex justify-content-center mt-5">
+    <a class="css-button" href = "{% url 'routefinder:route' %}">
+      <span class="css-button-text-alt">Try again</span>
+    </a>
+  </div>
+    <div class = "col-4 d-flex justify-content-center mt-5">
+      <a class="css-button" href = "{% url 'routefinder:info' %}">
+        <span class="css-button-text-alt">Learn more</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block extend_footer %}
+
+
+  <script type="text/javascript">
+
+    var google_api_key = "{{google_api_key|safe}}";
+    var lat_a = {{lat_a|safe}};
+    var long_a = {{long_a|safe}};
+    var lat_b = {{lat_b|safe}};
+    var long_b = {{long_b|safe}};
+    var origin = "{{origin|safe}}";
+    var destination = "{{destination|safe}}";
+    var directions = {{directions|safe}};
+    var pins = {{pins|safe}}
+
+  </script>
+
+  <script src="{% static 'google_maps.js' %}"></script>
+
+
+
+{% endblock %}
